@@ -1,9 +1,10 @@
 Christy Jacob - CXJ170002
-For doAnalysis() the provided code is correct. A node d dominates a node n if every path from the entry node to n must go through d, and every node dominates itself. To verify that the code is doAnalysis() is correct, I went step by step through each line of code to find it’s dominators and compared it to the output. The results are at the bottom of the README. The output from the provided doAnalysis() code was correct. 
 
-The PTA was more precise than the CHA and took less time. PTA had 7 total edges while CHA had 12 total edges so PTA is more precise since it doesn’t include extra calls that are not true such as animal.saySomething() calling fish.saySomething(). I measured the speed of each in nanoseconds. CHA took 161341400 nanoseconds while PTA took 131600 nanoseconds. Therefore, PTA is faster as well in this case.
+1. For doAnalysis() the provided code is correct. A node d dominates a node n if every path from the entry node to n must go through d, and every node dominates itself. To verify that the code is doAnalysis() is correct, I went step by step through each line of code to find it’s dominators and compared it to the output. The results are at the bottom of the README. The output from the provided doAnalysis() code was correct. 
 
-Here is my output for tracing heap access:
+2. The PTA was more precise than the CHA and took less time. PTA had 7 total edges while CHA had 12 total edges so PTA is more precise since it doesn’t include extra calls that are not true such as animal.saySomething() calling fish.saySomething(). I measured the speed of each in nanoseconds. CHA took 161341400 nanoseconds while PTA took 131600 nanoseconds. Therefore, PTA is faster as well in this case.
+
+3. Here is my output for tracing heap access:
 Thread Thread-13 wrote static field <a1.HelloThread: int x>
 Thread Thread-14 wrote static field <a1.HelloThread: int x>
 Thread Thread-14 read instance field <a1.HelloThread$TestThread: int y> of object Thread[Thread-14,5,Soot Threadgroup]
